@@ -2,9 +2,10 @@
 import { FaStar } from "react-icons/fa6";
 import { FaRegHeart } from "react-icons/fa";
 import { FaRegComment } from "react-icons/fa";
+import { Link } from "react-router";
 const Recipe = ({ recipe }) => {
   return (
-    <div className="p-3 shadow-md rounded-md">
+    <Link to={`/recipes/${recipe.id}`} className="p-3 shadow-md rounded-md">
       <img
         src={recipe.image}
         alt={recipe.name}
@@ -33,7 +34,7 @@ const Recipe = ({ recipe }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
